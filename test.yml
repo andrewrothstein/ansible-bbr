@@ -6,4 +6,4 @@
   - command: /usr/local/bin/bbr --version
     register: bbr_test_output
   - debug:
-      msg: '{{ bbr_test_output.stddout }}'
+      msg: '{{ bbr_test_output.stdout }}'
