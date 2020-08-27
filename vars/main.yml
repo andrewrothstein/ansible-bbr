@@ -1,0 +1,8 @@
+---
+# vars file for bbr
+bbr_platform: '{{ bbr_os }}-{{ bbr_arch }}'
+bbr_exe: bbr-{{ bbr_ver }}-{{ bbr_platform }}
+bbr_url: '{{ bbr_mirror }}/v{{ bbr_ver }}/{{ bbr_exe }}'
+bbr_checksum: '{{ bbr_checksums[bbr_ver][bbr_platform] }}'
+bbr_installed_exe: '{{ bbr_install_dir }}/{{ bbr_exe }}'
+bbr_installed_link: '{{ bbr_install_dir }}/bbr'
