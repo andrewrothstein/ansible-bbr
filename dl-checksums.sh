@@ -12,8 +12,8 @@ dl()
     local arch=$3
     local platform="${os}-${arch}"
     local url=$MIRROR/v$ver/bbr-${ver}-${platform}.sha256
-    printf "        # %s\n" $url
-    printf "        %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
 }
 
 dl_ver() {
@@ -23,4 +23,4 @@ dl_ver() {
     dl $ver linux amd64
 }
 
-dl_ver ${1:-1.7.2}
+dl_ver ${1:-1.9.0}
