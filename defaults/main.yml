@@ -1,6 +1,6 @@
 ---
 # defaults file for bbr
-bbr_ver: 1.9.1
+bbr_ver: 1.9.7
 bbr_os: linux
 bbr_arch: amd64
 bbr_install_dir: /usr/local/bin
@@ -21,3 +21,8 @@ bbr_checksums:
     darwin-amd64: sha256:7a4fcd4cd8ae1b9d5ae91be398098d65cb68e26860ce93bc76be359c74855662
     # https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v1.9.1/bbr-1.9.1-linux-amd64.sha256
     linux-amd64: sha256:f8f474ef812ea1727d8b03da4c304957fd5e775b23a586dc7a15a0030fc127f1
+  '1.9.7':
+    # https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v1.9.7/bbr-1.9.7-darwin-amd64.sha256
+    darwin-amd64: sha256:d696e66a281b76b5f4873ef70a3149642890c9b48475d003eddf83ab9d7548e4
+    # https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v1.9.7/bbr-1.9.7-linux-amd64.sha256
+    linux-amd64: sha256:9614175d1b8e91a3ed6c5ccfd84826b34f883397f779a6e0b8cd6d54b7b4fdbc
