@@ -1,6 +1,6 @@
 andrewrothstein.bbr
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-bbr.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-bbr)
+![Build Status](https://github.com/andrewrothstein/ansible-bbr/actions/workflows/build.yml/badge.svg)
 
 Installs the [bosh-backup-and-restore](https://github.com/cloudfoundry-incubator/bosh-backup-and-restore).
 
