@@ -1,9 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.bbr
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/bbr --version
-    register: bbr_test_output
-  - debug:
-      msg: '{{ bbr_test_output.stdout }}'
+    - name: Executing 'bbr --version'
+      ansible.builtin.command: bbr --version
+      changed_when: false
+      register: bbr_test_output
+    - name: Output of 'bbr --version'
+      ansible.builtin.debug:
+        msg: '{{ bbr_test_output.stdout }}'
