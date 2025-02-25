@@ -11,6 +11,7 @@ dl()
     local os=$2
     local arch=$3
     local platform="${os}-${arch}"
+    # https://github.com/cloudfoundry/bosh-backup-and-restore/releases/download/v1.9.74/bbr-1.9.74-linux-amd64.sha256
     local url=$MIRROR/v$ver/bbr-${ver}-${platform}.sha256
     printf "    # %s\n" $url
     printf "    %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
@@ -20,7 +21,9 @@ dl_ver() {
     local ver=$1
     printf "  '%s':\n" $ver
     dl $ver darwin amd64
+    dl $ver darwin arm64
     dl $ver linux amd64
+    dl $ver linux arm64
 }
 
-dl_ver ${1:-1.9.39}
+dl_ver ${1:-1.9.74}

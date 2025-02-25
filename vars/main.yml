@@ -1,5 +1,7 @@
 ---
 # vars file for bbr
+bbr_os: '{{ ansible_system | lower }}'
+bbr_arch: '{{ bbr_arch_map[ansible_architecture] }}'
 bbr_platform: '{{ bbr_os }}-{{ bbr_arch }}'
 bbr_exe: bbr-{{ bbr_ver }}-{{ bbr_platform }}
 bbr_url: '{{ bbr_mirror }}/v{{ bbr_ver }}/{{ bbr_exe }}'
